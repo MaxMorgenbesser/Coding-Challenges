@@ -28,6 +28,9 @@ y++
 console.log(overpaid , y)
 }
 }
+// underpaid + overpaid = budget
+
+
 budget = (budget-underpaid)/y
 return budget
 }
