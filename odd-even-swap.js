@@ -10,20 +10,20 @@ const oddeven = (arr) => {
   let num2;
 
   while (oddpointer > evenpointer) {
+
+    if (arr[oddpointer] % 2 != 0) {
+      oddpointer--;
+    }
     // console.log(evenpointer, "-----", oddpointer);
     if (arr[evenpointer] % 2 !== 0) {
       num1 = arr[evenpointer];
       num2 = arr[oddpointer];
       arr[evenpointer] = num2;
       arr[oddpointer] = num1;
-
       if (arr[evenpointer] % 2 == 0) {
         evenpointer++;
       } 
-      
-      if (arr[oddpointer] % 2 != 0) {
-        oddpointer--;
-      }
+    
     } else {
       evenpointer++;
     }
@@ -32,6 +32,6 @@ const oddeven = (arr) => {
   return arr;
 };
 
-const arr = [90, 91, 30, 50, 52, 51, 99, 88, 76,88,100,1010,112,73,85];
+const arr = [90, 91, 30, 50, 52, 51, 99, 88, 76,88,100,1010,113,73,85];
 
 console.log(oddeven(arr));
